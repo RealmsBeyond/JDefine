@@ -9,8 +9,8 @@ Run the JDefineMain.py file using a Python interpreter, or alternatively, simply
 ## How to Use
 
 1) Click the "Select Input File" button. Your input file should:
-<li>Be a .txt document</li>
-<li>Have each vocabulary word on a separate line</li>
+  <li>Be a .txt document</li>
+  <li>Have each vocabulary word on a separate line</li>
 
 2) Click the "Designate Output File" button and either choose an existing file to write to or designate a new file. If an existing file is chosen, the new definitions will automatically be placed beneath any existing text.
 
