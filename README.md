@@ -6,7 +6,7 @@ JDefine uses the Weblio dictionary (https://www.weblio.jp) to look up a list of 
 ## Running the Program
 Run the JDefineMain.py file using a Python interpreter, or alternatively, simply use the .exe file. Make sure whichever file you are running is located in the same directory as the other files.
 
-## How to Use
+## Usage
 
 1) Click the "Select Input File" button. Your input file should:
 
@@ -18,8 +18,7 @@ Run the JDefineMain.py file using a Python interpreter, or alternatively, simply
 
 3) Click "Retrieve Definitions." Note that definition extraction may take some time depending on the length of the list.
 
-## Usage Notes
-Weblio may temporarily block your IP if too many requests are received in a short period of time. This response appears to be triggered at around the 200 - 250 word mark, though this is just a rough estimate, so results may vary. To get around this limitation, I recommend either using a VPN or limiting the number of words you look up per session.
+<br>Note:</br> Weblio may temporarily block your IP if too many requests are received in a short period of time. This response appears to be triggered at around the 200 - 250 word mark, though this is just a rough estimate, so results may vary. To get around this limitation, I recommend either using a VPN or limiting the number of words you look up per session.
 
 ## Built With
 This project uses the TKinter and BeautifulSoup libraries along with the urllib and regex modules.
