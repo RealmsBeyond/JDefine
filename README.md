@@ -33,4 +33,4 @@ This project uses the TKinter and BeautifulSoup libraries along with the urllib 
 <li>Support for more specialized dictionaries (such as a slang dictionary)</li>
 <li>Support for additional input formats (.doc, .xml, etc.)</li>
 <li>Support for additional output formats (comma-/semicolon-delimited files, etc.)</li>
-<li>Add backup dictionaries for use when Weblio blocks requests from one's IP due to too many queries</li>
+<li>Backup dictionaries for use when Weblio blocks requests from one's IP due to too many queries</li>
