@@ -4,13 +4,13 @@
 JDefine uses the Weblio dictionary (https://www.weblio.jp) to look up a list of words provided in a text file and extract the definitions into a text file in tab-delimited format, allowing the file to be imported directly into Anki or any other SRS (Spaced Repetition System) application that supports the importation of tab-delimited text files. This program was developed as a tool for language learners who need a quick way to look up lists of Japanese words and generate flashcards for review.
 
 ## Running the Program
-Simply run the .exe file, or alternatively, run the JDefineMain.py file using a Python interpreter. Make sure whichever file you are running is located in the same directory as the other files.
+Run the JDefineMain.py file using a Python interpreter, or alternatively, simply use the .exe file. Make sure whichever file you are running is located in the same directory as the other files.
 
 ## How to Use
 
 1) Click the "Select Input File" button. Your input file should:
--Be a .txt document
--Have each vocabulary word on a separate line
+<li>Be a .txt document</li>
+<li>Have each vocabulary word on a separate line</li>
 
 2) Click the "Designate Output File" button and either choose an existing file to write to or designate a new file. If an existing file is chosen, the new definitions will automatically be placed beneath any existing text.
 
@@ -24,7 +24,7 @@ This project uses the TKinter and BeautifulSoup libraries along with the urllib 
 
 ## Known Issues
 
-<li>Nothing appears to be output when the search term contains certain combinations of numbers (e.g. 43423423). It is currently unclear why this occurs, but as it does not affect performance in any meaningful way, I have shelved searching for a solution for now.</li>
+<li>Nothing appears to be output when the search term contains certain combinations of numbers (e.g. 43423423). It is currently unclear why this occurs, but as it does not affect the functionality in any meaningful way, I have put off searching for a solution for now.</li>
 
 ## Potential Future Features
 
