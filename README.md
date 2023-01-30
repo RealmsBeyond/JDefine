@@ -23,10 +23,12 @@ Weblio may temporarily block your IP if too many requests are received in a shor
 This project uses the TKinter and BeautifulSoup libraries along with the urllib and regex modules.
 
 ## Known Issues
--Nothing appears to be output when the search term contains certain combinations of numbers (e.g. 43423423). It is currently unclear why this occurs, but as it does not affect performance in any meaningful way, I have shelved searching for a solution for now.
+
+<li>Nothing appears to be output when the search term contains certain combinations of numbers (e.g. 43423423). It is currently unclear why this occurs, but as it does not affect performance in any meaningful way, I have shelved searching for a solution for now.</li>
 
 ## Potential Future Features
--Support for more specialized dictionaries (such as a slang dictionary)
--Support for additional input formats (.doc, .xml, etc.)
--Support for additional output formats (comma-/semicolon-delimited files, etc.)
--Add backup dictionaries for use when Weblio blocks requests from one's IP due to too many queries
+
+<li>Support for more specialized dictionaries (such as a slang dictionary)</li>
+<li>Support for additional input formats (.doc, .xml, etc.)</li>
+<li>Support for additional output formats (comma-/semicolon-delimited files, etc.)</li>
+<li>Add backup dictionaries for use when Weblio blocks requests from one's IP due to too many queries</li>
