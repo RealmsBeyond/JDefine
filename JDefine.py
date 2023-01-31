@@ -1,4 +1,4 @@
-#Version 1.0, 1.28.2023
+#Version 1.0, 1.30.2023
 
 from tkinter import *
 from tkinter import filedialog
@@ -90,7 +90,7 @@ class JDefine():
             self.top.update()
             self.progress_label.config\
             (text=str(round(self.progress["value"]))
-            + "/" + str(len(self.wordlist)) + " words")
+            + "/" + str(len(self.wordlist)) + " words processed")
             self.progress["value"] += float(1/len(self.wordlist))
 
     #Look up words using the "weblio" dictionary (https://www.weblio.jp/)
