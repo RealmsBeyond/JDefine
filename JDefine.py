@@ -1,4 +1,4 @@
-#Version 1.0, 1.30.2023
+#Version 1.1, 2.16.2023
 
 from tkinter import *
 from tkinter import filedialog
@@ -33,9 +33,8 @@ class JDefine():
             if filename:              
                 with open(filename, "r", encoding="utf-8") as file:                  
                     for line in file:
-                        line = line.strip()
-                        line = line.encode("utf-8")
-                        if len(line) == 0: continue
+                        if len(line) == 0: continue                        
+                        line = line.strip().encode("utf-8")
                         self.wordlist.append(line)
                     self.inputflag = 1
 
@@ -107,7 +106,15 @@ class JDefine():
 
         with open(self.savename, "a", encoding="utf-8") as output:
             for word in self.wordlist:
+
+                #Advance the progress bar
                 self.step()
+
+                #To obtain the specific URL for each word:
+                #remove "b'" from the start of the string, format the
+                #hexadecimal string by changing the "\x"s in the URL
+                #to "%"s, then get rid of the single quotation marks     
+
                 slice = (str(word)[2:])
                 conversion = slice.replace("\\x", "%").replace("\'", "")
 
@@ -161,7 +168,6 @@ class JDefine():
                                 #For words with multiple definitions,
                                 #separate them using vertical bars (|)
                                 elif self.currentword == word.decode():
-                                    self.alreadyfound.add(word)
                                     output.write("　　|　　" + re.sub("<a" \
                                     "[\s\S]*?>|</a>|<span class[\s\S]*?" \
                                     "</span>|<b>|</b>", "", item[1]))
@@ -188,6 +194,7 @@ class JDefine():
                                 if "<br/>" not in item:
                                     if self.currentword == None:
                                         self.currentword = word.decode()
+                                        self.alreadyfound.add(word)
                                         output.write("\n\n" + word.decode() +\
                                         "\t" + re.sub("<a[\s\S]*?>|</a>|" \
                                         "span class[\s\S]*?</span>|<b>|</b>"\
@@ -199,6 +206,7 @@ class JDefine():
                                         "*?</span>|<b>|</b>", "", item))
                                     else:
                                         self.currentword = word.decode()
+                                        self.alreadyfound.add(word)
                                         output.write("\n\n" + word.decode() +\
                                         "\t" + re.sub("<a[\s\S]*?>|</a>|" \
                                         "<span class[\s\S]*?</span>|<b>|</b>"\
@@ -214,7 +222,8 @@ class JDefine():
 
                                 for item in definition:
                                     if self.currentword == None:
-                                        self.currentword = word.decode()                            
+                                        self.currentword = word.decode()
+                                        self.alreadyfound.add(word)                            
                                         output.write("\n\n" + word.decode() \
                                         + "\t" + re.sub("<a[\s\S]*?>|</a>|" \
                                         "<span class[\s\S]*?</span>|<b>|</b>"\
@@ -227,6 +236,7 @@ class JDefine():
 
                                     else:
                                         self.currentword = word.decode()
+                                        self.alreadyfound.add(word)
                                         output.write("\n\n" + word.decode() \
                                         + "\t" + re.sub("<a[\s\S]*?>|</a>|" \
                                         "<span class[\s\S]*?</span>|<b>|</b>"\
